@@ -33,6 +33,8 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
+    'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'pages.apps.PagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -134,3 +136,19 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
+#Email Settings
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'samoj2404@gmail.com'
+EMAIL_HOST_PASSWORD = 'psalmuel@2404'
+EMAIL_USE_TLS = True
+
+#recaptcha settings
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Lf557kUAAAAAPEqS5-oCUPf6XeTq1x9n53eJMOK'
